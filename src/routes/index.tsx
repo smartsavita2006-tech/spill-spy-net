@@ -59,15 +59,15 @@ function OverviewPage() {
           legend={
             <div className="space-y-1">
               <div>
-                <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[--accent-cyan]" />
+                <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[var(--accent-cyan)]" />
                 Detected slick
               </div>
               <div>
-                <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[--accent-amber]" />
+                <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[var(--accent-amber)]" />
                 Probable origin
               </div>
               <div>
-                <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[--accent-blue]" />
+                <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[var(--accent-blue)]" />
                 AIS vessels
               </div>
             </div>
@@ -152,7 +152,7 @@ function OverviewPage() {
           <div className="text-[11px] text-muted-foreground">
             {topVessel.type} · MMSI {topVessel.mmsi} · {topVessel.flag}
           </div>
-          <div className="mt-3 text-3xl font-semibold tabular-nums text-[--accent-cyan]">
+          <div className="mt-3 text-3xl font-semibold tabular-nums text-[var(--accent-cyan)]">
             {top.suspicion}
             <span className="ml-1 text-sm text-muted-foreground">suspicion</span>
           </div>

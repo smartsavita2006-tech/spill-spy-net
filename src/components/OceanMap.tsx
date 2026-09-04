@@ -101,7 +101,7 @@ export function OceanMap({ children, height = 460, initialZoom = 1, initialCente
     "h-8 w-8 rounded-md border border-border/80 bg-card/80 text-foreground/80 backdrop-blur transition-colors hover:border-primary/60 hover:text-primary";
 
   return (
-    <div className="relative overflow-hidden rounded-lg border border-border bg-[--map-bg]">
+    <div className="relative overflow-hidden rounded-lg border border-border bg-[var(--map-bg)]">
       <div
         ref={containerRef}
         style={{ height }}

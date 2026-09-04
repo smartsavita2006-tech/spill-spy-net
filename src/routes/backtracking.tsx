@@ -49,11 +49,11 @@ function BacktrackingPage() {
             legend={
               <div className="space-y-1">
                 <div>
-                  <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[--accent-cyan]" />
+                  <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[var(--accent-cyan)]" />
                   Detected slick (t=0)
                 </div>
                 <div>
-                  <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[--accent-amber]" />
+                  <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[var(--accent-amber)]" />
                   Probable origin (t−9h)
                 </div>
               </div>

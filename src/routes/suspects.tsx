@@ -56,7 +56,7 @@ function SuspectsPage() {
               onClick={() => setSort(s.key)}
               className={`rounded-md border px-2.5 py-1 text-[11px] transition-colors ${
                 sort === s.key
-                  ? "border-[--accent-cyan]/60 text-[--accent-cyan]"
+                  ? "border-[var(--accent-cyan)]/60 text-[var(--accent-cyan)]"
                   : "border-border text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -95,7 +95,7 @@ function SuspectsPage() {
                   <Meter label="Vessel type" value={s.vesselType} />
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-semibold tabular-nums text-[--accent-cyan]">
+                  <div className="text-2xl font-semibold tabular-nums text-[var(--accent-cyan)]">
                     {s.suspicion}
                   </div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">

@@ -45,7 +45,7 @@ export function Meter({ label, value }: { label: string; value: number }) {
       </div>
       <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-secondary">
         <div
-          className="h-full rounded-full bg-[--accent-cyan] transition-[width] duration-500 ease-out"
+          className="h-full rounded-full bg-[var(--accent-cyan)] transition-[width] duration-500 ease-out"
           style={{ width: `${value}%` }}
         />
       </div>
@@ -55,8 +55,8 @@ export function Meter({ label, value }: { label: string; value: number }) {
 
 export function StatusDot({ label }: { label: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-full border border-[--accent-cyan]/40 px-2 py-0.5 text-[11px] uppercase tracking-[0.14em] text-[--accent-cyan]">
-      <span className="om-pulse-dot h-1.5 w-1.5 rounded-full bg-[--accent-cyan]" />
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--accent-cyan)]/40 px-2 py-0.5 text-[11px] uppercase tracking-[0.14em] text-[var(--accent-cyan)]">
+      <span className="om-pulse-dot h-1.5 w-1.5 rounded-full bg-[var(--accent-cyan)]" />
       {label}
     </span>
   );
