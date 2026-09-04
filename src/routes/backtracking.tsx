@@ -23,12 +23,12 @@ export const Route = createFileRoute("/backtracking")({
   component: BacktrackingPage,
 });
 
-const MAX_H = driftPath[driftPath.length - 1].hoursAgo;
+const MAX_H = driftPath[driftPath.length - 1]!.hoursAgo;
 
 function BacktrackingPage() {
   const [hours, setHours] = useState(0);
   const idx = Math.round(hours);
-  const point = driftPath[idx];
+  const point = driftPath[idx]!;
   const visible = driftPath.slice(0, idx + 1);
   const detectedMs = new Date(detection.detectedAt).getTime();
   const stamp = new Date(detectedMs - hours * 3600_000).toISOString();

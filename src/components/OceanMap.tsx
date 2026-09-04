@@ -26,10 +26,10 @@ const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 
 type Props = {
   children: ReactNode;
-  height?: number;
-  initialZoom?: number;
-  initialCenter?: [number, number];
-  legend?: ReactNode;
+  height?: number | undefined;
+  initialZoom?: number | undefined;
+  initialCenter?: [number, number] | undefined;
+  legend?: ReactNode | undefined;
 };
 
 export function OceanMap({ children, height = 460, initialZoom = 1, initialCenter, legend }: Props) {
@@ -215,11 +215,11 @@ export function Marker({
 }: {
   lon: number;
   lat: number;
-  color?: string;
-  label?: string;
-  active?: boolean;
-  onClick?: () => void;
-  pulse?: boolean;
+  color?: string | undefined;
+  label?: string | undefined;
+  active?: boolean | undefined;
+  onClick?: (() => void) | undefined;
+  pulse?: boolean | undefined;
 }) {
   const [x, y] = project(lon, lat);
   return (

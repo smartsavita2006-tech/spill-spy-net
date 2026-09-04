@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 function OverviewPage() {
   const [selected, setSelected] = useState<string | null>(null);
   const [modal, setModal] = useState(false);
-  const top = suspects[0];
+  const top = suspects[0]!;
   const topVessel = vesselById(top.vesselId);
   const spillD =
     spillPolygon.map(([lon, lat], i) => `${i ? "L" : "M"}${project(lon, lat).join(" ")}`).join(" ") +
@@ -90,7 +90,7 @@ function OverviewPage() {
             label="Probable origin"
           />
           {vessels.map((v) => {
-            const last = v.track[v.track.length - 1];
+            const last = v.track[v.track.length - 1]!;
             return (
               <g key={v.id}>
                 <path

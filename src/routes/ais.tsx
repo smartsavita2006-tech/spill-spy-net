@@ -24,7 +24,7 @@ export const Route = createFileRoute("/ais")({
 });
 
 function AisPage() {
-  const [selectedId, setSelectedId] = useState<string>(vessels[0].id);
+  const [selectedId, setSelectedId] = useState<string>(vessels[0]!.id);
   const [open, setOpen] = useState(false);
   const selected = vessels.find((v) => v.id === selectedId)!;
   const score = suspects.find((s) => s.vesselId === selectedId);
@@ -62,7 +62,7 @@ function AisPage() {
               label="Origin cell"
             />
             {vessels.map((v) => {
-              const last = v.track[v.track.length - 1];
+              const last = v.track[v.track.length - 1]!;
               const active = v.id === selectedId;
               return (
                 <g key={v.id}>
