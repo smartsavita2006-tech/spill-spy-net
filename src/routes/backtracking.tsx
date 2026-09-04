@@ -74,11 +74,6 @@ function BacktrackingPage() {
               strokeWidth={2}
               strokeLinecap="round"
             />
-            <circle
-              cx={0}
-              cy={0}
-              r={0}
-            />
             <Marker lon={detection.longitude} lat={detection.latitude} label="Detected slick" />
             <Marker
               lon={probableOrigin.lon}
